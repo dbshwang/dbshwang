@@ -1,0 +1,1 @@
+class IngredientsController < ApplicationController; end
