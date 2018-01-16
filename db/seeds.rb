@@ -32,3 +32,10 @@ margarita.ingredients.create(description: "1½ oz. fresh pineapple juice")
 margarita.ingredients.create(description: "½ oz. Grand Marnier or other orange liqueur")
 margarita.ingredients.create(description: "Coarse salt, for rimming glass")
 margarita.ingredients.create(description: "Pineapple wedge and peel, for garnish")
+
+Drink.create(
+  title: "Testing deployment migration and seed",
+  description: "Hoping that this will work properly without breaking anything",
+  steps: "Just heroku push that to master baby",
+  source: "http://aspiringwebdev.com/run-rails-migrations-automatically-on-heroku/"
+)
