@@ -6,14 +6,20 @@
   "dependencies": {
     "mobx": "^3.4.1",
     "mobx-react": "^4.3.5",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
-    "build": "NODE_PATH=src react-scripts build",
+    "start-js": "PORT=3001 react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "NODE_PATH=src react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "build-css": "node-sass-chokidar --include-path ./src src/ -o src",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
