@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import logo from 'logo.svg';
-import 'App.css';
 
 class HomePage extends Component {
   componentDidMount() {
@@ -12,14 +10,12 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <div className='col-1 sm-col-5 md-col-8 lg-col-12 mx-auto'>
+          <h1 className='rufina gold'>Daniel Hwang</h1>
+          <h1 className='libre'>professional deep diver of the DOM</h1>
+          <h1 className='montserrat'>Coming soon</h1>
+        </div>
       </div>
     );
   }

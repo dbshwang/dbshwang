@@ -1,37 +1,25 @@
-@import 'styles/_reset.scss';
+// HTML browser uniform reset
+// Uses normalize.scss version 8.0.0
+// https://github.com/necolas/normalize.css/
+@import 'styles/normalize.scss';
 
-.App {
-  text-align: center;
-}
+// Variables must be loaded before all custom CSS
+@import 'styles/variables/breakpoints';
+@import 'styles/variables/colours';
+@import 'styles/variables/font_families';
+@import 'styles/variables/font_sizes';
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+// Utilities must be loaded after variables
+// and before all custom components
+@import 'styles/utilities/align';
+@import 'styles/utilities/font/colours';
+@import 'styles/utilities/font/families';
+@import 'styles/utilities/font/sizes';
+@import 'styles/utilities/font/styles';
+@import 'styles/utilities/layout';
+@import 'styles/utilities/margin';
+@import 'styles/utilities/padding';
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.Test { 
-  .NestedAttr {
-    color: $tuatara;
-    background-color: $dodger;
-  }
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+// Components to be loaded after all
+// utilities and variables
+@import 'styles/components/grid/grid';
