@@ -4,12 +4,22 @@
 @import 'styles/normalize.scss';
 
 // Variables must be loaded before all custom CSS
+@import 'styles/variables/breakpoints';
 @import 'styles/variables/colours';
+@import 'styles/variables/font_families';
 @import 'styles/variables/font_sizes';
 
 // Utilities must be loaded after variables
 // and before all custom components
-@import 'styles/utilities/font_sizes';
-@import 'styles/utilities/font_colours';
-@import 'styles/utilities/padding';
+@import 'styles/utilities/align';
+@import 'styles/utilities/font/colours';
+@import 'styles/utilities/font/families';
+@import 'styles/utilities/font/sizes';
+@import 'styles/utilities/font/styles';
+@import 'styles/utilities/layout';
 @import 'styles/utilities/margin';
+@import 'styles/utilities/padding';
+
+// Components to be loaded after all
+// utilities and variables
+@import 'styles/components/grid/grid';
