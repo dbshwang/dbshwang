@@ -1,0 +1,15 @@
+$page-gutters: 14px;
+
+.Container {
+  margin: 0 auto;
+  padding-right: $page-gutters;
+  padding-left: $page-gutters;
+  width: 100%;
+  max-width: calc(100% - (#{$page-gutters} * 2));
+}
+
+@media (min-width: $large) {
+  .Container {
+    max-width: calc(#{$large} - #{$page-gutters} * 2);
+  }
+}
