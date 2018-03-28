@@ -1,7 +1,9 @@
-.bold    { font-weight: 500; }
-.regular { font-weight: normal }
-.italic  { font-style: italic }
-.caps    { text-transform: uppercase; }
+.bold      { font-weight: $bold; }
+.semi-bold { font-weight: $semi-bold; }
+.regular   { font-weight: $regular; }
+.light     { font-weight: $light; }
+.italic    { font-style: italic }
+.caps      { text-transform: uppercase; }
 
 .left-align   { text-align: left }
 .center       { text-align: center }

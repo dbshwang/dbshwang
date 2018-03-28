@@ -8,6 +8,7 @@
 @import 'styles/variables/colours';
 @import 'styles/variables/font_families';
 @import 'styles/variables/font_sizes';
+@import 'styles/variables/font_weights';
 
 // Utilities must be loaded after variables
 // and before all custom components
@@ -19,7 +20,39 @@
 @import 'styles/utilities/layout';
 @import 'styles/utilities/margin';
 @import 'styles/utilities/padding';
+@import 'styles/utilities/position';
 
 // Components to be loaded after all
 // utilities and variables
+@import 'styles/components/container';
 @import 'styles/components/grid/grid';
+
+@import 'styles/containers/home';
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: $font-montserrat;
+  font-weight: $regular;
+  color: $tuatara;
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: inherit;
+  margin-top: auto;
+  margin-bottom: auto;
+}
