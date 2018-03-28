@@ -1,11 +1,18 @@
 $page-gutters: 14px;
 
 .Container {
-  margin: 0 auto;
-  padding-right: $page-gutters;
-  padding-left: $page-gutters;
+  height: 100%;
   width: 100%;
   max-width: calc(100% - (#{$page-gutters} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding: $page-gutters;
+}
+
+.Container:after,
+.Container:before {
+  content: " ";
+  display: table;
 }
 
 @media (min-width: $large) {
