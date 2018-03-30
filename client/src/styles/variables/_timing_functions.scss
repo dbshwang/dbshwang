@@ -1,0 +1,12 @@
+// ease-in-out
+$standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+$sharp: cubic-bezier(0.4, 0.0, 0.6, 1);
+
+// ease-out
+$decelerate: cubic-bezier(0.0, 0.0, 0.2, 1);
+
+// ease-in
+$accelerate: cubic-bezier(0.4, 0.0, 1, 1);
+
+// custom
+$sharp-out: cubic-bezier(0.15, 1.02, 0.7, 0.96);

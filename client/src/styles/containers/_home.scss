@@ -1,10 +1,101 @@
 .Name {
   font-size: 3rem;
   letter-spacing: 0.5px;
+
+  span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-1rem);
+    animation: 0.45s Name-fading-down $decelerate forwards;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes Name-fading-down {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.Subtitle {
+  animation: 
+    0.45s fading-in $sharp-out forwards,
+    0.45s Subtitle-moving-up $sharp-out forwards;
+  animation-delay: 1.5s, 1.5s;
+  opacity: 0;
+
+  @keyframes Subtitle-moving-up {
+    0% {
+      transform: translateY(1rem);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
 }
 
 .Barcode {
   font-size: 4.5rem;
-  opacity: 0.1;
   width: max-content;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: calc(100% - 38px);
+    width: 100%;
+    left: 0;
+    top: 5px;
+    background-color: $jumbo;
+    border-radius: 0.5rem;
+
+    transform: scaleX(0);
+    animation: 
+      0.4s Barcode-scanning-in $decelerate forwards,
+      0.5s Barcode-scanning-out $accelerate forwards;
+    animation-delay: 0.5s, 1s;
+  }
+
+  span {
+    opacity: 0;
+    animation: 
+      0s fading-in forwards, 
+      0.7s Barcode-fading-out $sharp-out forwards;
+    animation-delay: 0.9s, 1.5s;
+  }
+
+  @keyframes Barcode-fading-out {
+    0% { 
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0.1;
+    }
+  }
+
+  @keyframes Barcode-scanning-in {
+    0% {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    100% {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  @keyframes Barcode-scanning-out {
+    0% {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+
+    100% {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+  }
 }

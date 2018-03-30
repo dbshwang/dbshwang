@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavigationBar} from 'components';
 
 class WorkPage extends React.Component {
   componentDidMount() {
@@ -10,9 +11,12 @@ class WorkPage extends React.Component {
 
   render() {
     return (
-      <h1 className='Test'>
-        <div className='NestedAttr'>Work Experience</div>
-      </h1>
+      <div>
+        <NavigationBar />
+        <h1 className='Test'>
+          <div className='NestedAttr'>Work Experience</div>
+        </h1>
+      </div>
     );
   }
 }
