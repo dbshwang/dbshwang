@@ -1,0 +1,21 @@
+.ClickEffect {
+  position: absolute;
+  background-color: $jumbo;
+  border-radius: 100%;
+  animation: 0.3s ClickEffect-radiate $decelerate;
+  transform-origin: center;
+  height: 1rem;
+  width: 1rem;
+
+  @keyframes ClickEffect-radiate {
+    0% {
+      transform: scale(0);
+    }
+
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+}
+
