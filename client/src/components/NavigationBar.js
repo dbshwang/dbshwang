@@ -6,7 +6,7 @@ const NavigationBar = () => {
     <div className='NavigationBar center'>
       <ul className='my4 py2 mx-auto'>
         <li className='px1-5 inline-block light caps'>
-          <NavLink activeClassName='active' to='/'>Home</NavLink>
+          <NavLink exact to='/'>Home</NavLink>
         </li>
         <li className='px1-5 inline-block light caps'>
           <NavLink to='/work'>Work</NavLink>
