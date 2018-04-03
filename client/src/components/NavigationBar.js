@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-const NavigationBar = () => {
+const NavigationBar = ({animate}) => {
   return (
-    <div className='NavigationBar center'>
-      <ul className='my4 py2 mx-auto'>
+    <div className={`NavigationBar py4 center ${animate ? 'animate-in' : ''}`}>
+      <ul className='mx-auto'>
         <li className='px1-5 inline-block light caps'>
           <NavLink exact to='/'>Home</NavLink>
         </li>
@@ -24,5 +24,9 @@ const NavigationBar = () => {
     </div>
   );
 }
+
+NavigationBar.defaultProps = {
+  animate: false
+};
 
 export default NavigationBar;

@@ -11,8 +11,7 @@ class WorkPage extends React.Component {
 
   render() {
     return (
-      <div>
-        <NavigationBar />
+      <div className='Container'>
         <h1 className='Test'>
           <div className='NestedAttr'>Work Experience</div>
         </h1>

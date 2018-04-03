@@ -1,12 +1,14 @@
 $page-gutters: 14px;
 
 .Container {
+  position: relative;
   height: 100%;
   width: 100%;
   max-width: calc(100% - (#{$page-gutters} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding: $page-gutters;
+  padding-right: $page-gutters;
+  padding-left: $page-gutters;
 }
 
 .Container:after,
@@ -19,4 +21,28 @@ $page-gutters: 14px;
   .Container {
     max-width: calc(#{$large} - #{$page-gutters} * 2);
   }
+}
+
+.fade-in-enter {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-3rem);
+}
+
+.fade-in-enter-active {
+  position: absolute;
+  opacity: 1;
+  transition: 0.3s $decelerate 0.4s;
+  transform: translateY(0);
+}
+
+.fade-in-exit {
+  position: fixed;
+  opacity: 1;
+}
+
+.fade-in-exit-active {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: 0.3s $accelerate;
 }
