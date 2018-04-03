@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavigationBar} from 'components';
 
 class WorkPage extends React.Component {
   componentDidMount() {

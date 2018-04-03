@@ -26,23 +26,27 @@ $page-gutters: 14px;
 .fade-in-enter {
   position: relative;
   opacity: 0;
-  transform: translateY(-3rem);
+  transform: translateY(-3rem) translateX(-50%);
 }
 
 .fade-in-enter-active {
   position: absolute;
+  left: 50%;
+  transform: translateY(0) translateX(-50%);
   opacity: 1;
   transition: 0.3s $decelerate 0.4s;
-  transform: translateY(0);
 }
 
 .fade-in-exit {
   position: fixed;
+  left: 50%;
+  overflow: hidden;
+  transform: translateX(-50%) translateY(0);
   opacity: 1;
 }
 
 .fade-in-exit-active {
   opacity: 0;
-  transform: translateY(2rem);
+  transform: translateX(-50%) translateY(2rem);
   transition: 0.3s $accelerate;
 }
