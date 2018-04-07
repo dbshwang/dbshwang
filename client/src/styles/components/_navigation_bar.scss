@@ -1,28 +1,13 @@
 .NavigationBar {
-  &.animate-in {
-    opacity: 0;
-    transform: translateY(-2rem);
-    animation: 0.45s NavigationBar-load-in 1.5s $decelerate forwards;
-
-    a.active:after {
-      animation: 0.3s NavigationLink-underline 2s $standard forwards;
-    }
-  }
-
   ul {
     margin: 0;
   }
-
-  li:first-child a:after { background-color: $cherry; }
-  li:nth-child(2) a:after { background-color: $seafoam; }
-  li:nth-child(3) a:after { background-color: $gold; }
-  li:nth-child(4) a:after { background-color: $cornrow; }
-  li:nth-child(5) a:after { background-color: $flamingo; }
 
   a {
     position: relative;
     color: $tuatara;
     padding: 1rem 0;
+    transition: 0.3s $standard;
 
     &:after {
       content: '';
@@ -31,10 +16,24 @@
       bottom: 0;
       height: 3px;
       width: 100%;
+      background-color: $gold;
       border-radius: 1rem;
       transition: 0.3s $standard;
       transform: scaleX(0);
       transform-origin: left;
+    }
+
+    &.active, 
+    &:hover {
+      color: $gold 
+    }
+
+    &:active {
+      color: darken($gold, 25%);
+
+      &:after {
+        background-color: darken($gold, 25%);
+      }
     }
 
     &:hover:after {

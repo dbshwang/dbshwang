@@ -18,7 +18,7 @@ class App extends Component {
           <Route render={({location}) => (
             <div className='relative'>
               <TransitionGroup>
-                <CSSTransition key={location.key} classNames='fade-in' timeout={700}>
+                <CSSTransition key={location.key} classNames='PageTransition' timeout={700}>
                   <Switch location={location}>
                     <Route exact path='/' component={HomePage}/>
                     <Route path='/work' component={WorkPage}/>

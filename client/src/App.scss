@@ -29,10 +29,15 @@
 @import 'styles/components/click_effect';
 @import 'styles/components/grid/grid';
 @import 'styles/components/navigation_bar';
+@import 'styles/components/page_transition';
 
 // Reusable animations
 @import 'styles/keyframes/fading';
 @import 'styles/containers/home';
+
+html, body {
+  background-color: $paper;
+}
 
 html {
   height: 100%;
