@@ -1,12 +1,14 @@
 $page-gutters: 14px;
 
 .Container {
+  position: relative;
   height: 100%;
   width: 100%;
   max-width: calc(100% - (#{$page-gutters} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding: $page-gutters;
+  padding-right: $page-gutters;
+  padding-left: $page-gutters;
 }
 
 .Container:after,
@@ -20,3 +22,4 @@ $page-gutters: 14px;
     max-width: calc(#{$large} - #{$page-gutters} * 2);
   }
 }
+

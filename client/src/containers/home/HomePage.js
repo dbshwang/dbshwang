@@ -1,14 +1,13 @@
 import React from 'react';
-import {NavigationBar} from 'components';
 
 const HomePage = () => {
   return (
-    <div className='Container'>
-      <NavigationBar />
-      <div className='absolute-middle center'>
+    <div className='Container Homepage'>
+      <div className='LandingAnimation center'>
         <div className='relative'>
           <h1 className='Name jumbo bold rufina mb0-5'>
-            <span>danielhwang</span>
+            <span>daniel</span>
+            <span>hwang</span>
           </h1>
           <h2 className='Barcode mt1-5 absolute-middle jumbo libre'>
             <span>professional deep diver of the DOM</span>

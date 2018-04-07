@@ -1,3 +1,14 @@
+.LandingAnimation {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.Homepage {
+  height: calc(100vh - 10rem);
+}
+
 .Name {
   font-size: 3rem;
   letter-spacing: 0.5px;
@@ -99,3 +110,4 @@
     }
   }
 }
+

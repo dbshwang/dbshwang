@@ -1,0 +1,27 @@
+.PageTransition-enter {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-3rem) translateX(-50%);
+}
+
+.PageTransition-enter-active {
+  position: absolute;
+  left: 50%;
+  transform: translateY(0) translateX(-50%);
+  opacity: 1;
+  transition: 0.3s $decelerate 0.4s;
+}
+
+.PageTransition-exit {
+  position: fixed;
+  left: 50%;
+  overflow: hidden;
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.PageTransition-exit-active {
+  opacity: 0;
+  transform: translateX(-50%) translateY(2rem);
+  transition: 0.3s $accelerate;
+}
