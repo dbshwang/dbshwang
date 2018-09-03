@@ -1,0 +1,18 @@
+.WorkSection {
+  position: relative;
+  height: 72vh;
+  border-radius: 10px;
+  margin-bottom: 9rem;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+}
+
+.WorkSection--Kik      { background-color: #61CB2A; }
+.WorkSection--Bidvine  { background-color: #663FB4; }
+.WorkSection--Skywatch { background-color: #463E3E; }
+.WorkSection--Collage  { background-color: #466BF3; }

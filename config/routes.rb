@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :drinks
   end
 
-  get '*path', to: 'application#fallback_index_html', contraints: -> (request) do
+  get '*path', to: 'application#fallback_index_html', contraints: ->(request) do
     !request.xhr? && request.format.html?
   end
 end
