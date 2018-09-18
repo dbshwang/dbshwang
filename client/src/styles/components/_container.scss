@@ -19,7 +19,13 @@ $page-gutters: 14px;
 
 @media (min-width: $large) {
   .Container {
-    max-width: calc(#{$large} - #{$page-gutters} * 2);
+    max-width: calc(#{$medium} + #{$page-gutters} * 2);
+  }
+}
+
+@media (min-width: $xlarge) {
+  .Container {
+    max-width: calc(#{$large} + #{$page-gutters} * 2);
   }
 }
 
