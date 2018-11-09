@@ -5,20 +5,26 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Configuration backend
+- `brew install rbenv`
+- `rbenv install 2.5.1`
+- `rbenv local 2.5.1` or `rbenv global 2.5.1` to default system's version
+- `gem install bundle`
+- `gem install rails`
+- `bundle install`
 
-* System dependencies
+* Configuration frontend
+- Install node
+- `npm install -g yarn`
+- `cd client && yarn`
 
-* Configuration
+* Database
+- `rake db:setup`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Running servers
+Procfile.dev will boot up both the backend and frontend servers by running `rake start`.
+They should be hosted on `http://localhost:8001`.
+If you want to run them on separate consoles for better visibility of the terminal.
+Run the following commands in separate sessions:
+- `rails s`
+- `cd client && npm start`
