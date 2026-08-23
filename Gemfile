@@ -13,7 +13,7 @@ gem 'rails', '~> 5.0.1'
 
 # Server
 gem 'pg'
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3'
 
 group :development, :test do
   gem 'byebug', platform: :mri
